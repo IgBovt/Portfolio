@@ -10,3 +10,9 @@
   font-style: normal;
   src: url('./fonts/Manrope-VariableFont_wght.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'BricolageGrotesque';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/BricolageGrotesque.ttf') format('truetype');
+}
