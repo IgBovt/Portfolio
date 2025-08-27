@@ -1,18 +1,12 @@
 @font-face {
-  font-family: 'BricolageGrotesque';
-  font-weight: normal;
-  font-style: normal;
-  src: url('./fonts/LibertinusSerif-Regular.ttf') format('truetype');
-}
-@font-face {
   font-family: 'Manrope';
   font-weight: normal;
   font-style: normal;
   src: url('./fonts/Manrope-VariableFont_wght.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'BricolageGrotesque';
+  font-family: 'ClashDisplay';
   font-weight: normal;
   font-style: normal;
-  src: url('./fonts/BricolageGrotesque.ttf') format('truetype');
+  src: url('./fonts/ClashDisplay-Variable.ttf') format('truetype');
 }

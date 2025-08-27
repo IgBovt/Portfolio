@@ -1,0 +1,20 @@
+import css from './Welcome.module.css';
+export default function Welcome() {
+  return (
+    <section className={css.container}>
+      <div className={css.header}>
+        <p className={css.auteur}>BOVT</p>
+        <div className={css.mailContainer}>
+          <p className={css.mail}>bovt.anastasia.ux@gmail.com</p>
+        </div>
+      </div>
+      <h1>UI/UX and Product Designer </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Porttitor pulvinar felis ut
+        morbi convallis mauris placerat. Eu tristique ac id nam. Tincidunt
+        interdum magna volutpat mi odio dolor a facilisis duis. Massa id
+        sagittis imperdiet tellus nisl in mi.
+      </p>
+    </section>
+  );
+}
