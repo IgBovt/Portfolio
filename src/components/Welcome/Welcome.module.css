@@ -1,7 +1,6 @@
 .container {
   width: 100%;
   height: 100vh;
-  padding: 16px 16px 40px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,6 +19,7 @@
   align-items: center;
   height: 64px;
   font-family: 'ClashDisplay';
+  margin: 0 16px;
 }
 .auteur {
   font-weight: 500;
@@ -36,6 +36,9 @@
   padding: 10px 12px;
   border-radius: 50px;
   background-color: var(--half-black);
+}
+.textContainer {
+  margin: 0px 16px 100px 16px;
 }
 .title {
   color: var(--white);
