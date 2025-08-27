@@ -2,13 +2,13 @@
   width: 100%;
   height: 100vh;
   background-color: #7d1616;
+  padding: 16px 16px 40px 16px;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 64px;
-  padding: 16px;
   font-family: 'ClashDisplay';
 }
 .auteur {
