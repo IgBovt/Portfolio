@@ -1,0 +1,8 @@
+:root {
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --main-text: #ced2d4;
+  --half-black: #00000040;
+  --white: #fff;
+  --semiwhite: #ffffff99;
+  --secondary: #7c858d;
+}

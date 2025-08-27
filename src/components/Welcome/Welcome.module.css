@@ -1,8 +1,18 @@
 .container {
   width: 100%;
   height: 100vh;
-  background-color: #7d1616;
   padding: 16px 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(128, 0, 128, 0.7) 0%,
+      rgba(0, 0, 0, 0.95) 70%
+    ),
+    linear-gradient(to bottom, rgba(128, 0, 128, 0.6) 0%, rgba(0, 0, 0, 1) 100%);
+  background-blend-mode: multiply;
 }
 .header {
   display: flex;
@@ -14,13 +24,34 @@
 .auteur {
   font-weight: 500;
   font-size: 16px;
+  color: var(--main-text);
 }
 .mail {
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 12px;
+  color: var(--main-text);
 }
 .mailContainer {
   background-color: #149530;
   padding: 10px 12px;
   border-radius: 50px;
+  background-color: var(--half-black);
+}
+.title {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  margin-bottom: 16px;
+  font-family: 'ClashDisplay';
+}
+.span {
+  color: var(--semiwhite);
+}
+.text {
+  font-family: 'Manrope';
+  color: var(--secondary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
 }
