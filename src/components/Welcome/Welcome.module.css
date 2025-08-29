@@ -68,4 +68,5 @@
 }
 .iconCopy {
   stroke: var(--main-text);
+  fill: transparent;
 }
