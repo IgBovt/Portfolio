@@ -32,14 +32,17 @@
   color: var(--main-text);
 }
 .mailContainer {
-  background-color: #149530;
   padding: 10px 12px;
   border-radius: 50px;
   background-color: var(--half-black);
+  display: flex;
+  gap: 6px;
 }
 .textContainer {
-  margin: 0px 16px 100px 16px;
+  margin: 0px 16px 40px 16px;
+  position: relative;
 }
+
 .title {
   color: var(--white);
   font-weight: 500;
@@ -57,4 +60,12 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 20px;
+}
+.iconArrow {
+  stroke: var(--secondary);
+}
+.iconCopy {
+  fill: red;
+  stroke: yellow;
 }
