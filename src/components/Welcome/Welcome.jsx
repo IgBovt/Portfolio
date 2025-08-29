@@ -7,7 +7,7 @@ export default function Welcome() {
       <div className={css.header}>
         <p className={css.auteur}>BOVT</p>
         <div className={css.mailContainer}>
-          <Icon className={css.iconArrow} width="12" height="12" id="icon" />
+          <Icon className={css.iconCopy} width="12" height="12" id="copy" />
           <p className={css.mail}>bovt.anastasia.ux@gmail.com</p>
         </div>
       </div>
