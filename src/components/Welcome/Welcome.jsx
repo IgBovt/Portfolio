@@ -12,16 +12,19 @@ export default function Welcome() {
         </div>
       </div>
       <div className={css.textContainer}>
-        <h1 className={css.title}>
-          UI/UX <span className={css.span}>and</span>
-          <br /> Product <span className={css.span}>Designer</span>
-        </h1>
-        <p className={css.text}>
-          Lorem ipsum dolor sit amet consectetur. Porttitor pulvinar felis ut
-          morbi convallis mauris placerat. Eu tristique ac id nam. Tincidunt
-          interdum magna volutpat mi odio dolor a facilisis duis. Massa id
-          sagittis imperdiet tellus nisl in mi.
-        </p>
+        <div>
+          <h1 className={css.title}>
+            UI/UX <span className={css.span}>and</span>
+            <br /> Product <span className={css.span}>Designer</span>
+          </h1>
+          <p className={css.text}>
+            Lorem ipsum dolor sit amet consectetur. Porttitor pulvinar felis ut
+            morbi convallis mauris placerat. Eu tristique ac id nam. Tincidunt
+            interdum magna volutpat mi odio dolor a facilisis duis. Massa id
+            sagittis imperdiet tellus nisl in mi.
+          </p>
+        </div>
+
         <Icon className={css.iconArrow} id="down" />
       </div>
     </section>
