@@ -1,6 +1,6 @@
-export default function Icon({ className, width, height, id }) {
+export default function Icon({ className, id }) {
   return (
-    <svg className={className} width={width} height={height}>
+    <svg className={className}>
       <use href={`/sprite.svg#${id}`} />
     </svg>
   );

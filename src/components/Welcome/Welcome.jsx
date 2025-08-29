@@ -7,7 +7,7 @@ export default function Welcome() {
       <div className={css.header}>
         <p className={css.auteur}>BOVT</p>
         <div className={css.mailContainer}>
-          <Icon className={css.iconCopy} width="12" height="12" id="copy" />
+          <Icon className={css.iconCopy} id="copy" />
           <p className={css.mail}>bovt.anastasia.ux@gmail.com</p>
         </div>
       </div>
@@ -22,7 +22,7 @@ export default function Welcome() {
           interdum magna volutpat mi odio dolor a facilisis duis. Massa id
           sagittis imperdiet tellus nisl in mi.
         </p>
-        <Icon className={css.iconArrow} width="40" height="40" id="down" />
+        <Icon className={css.iconArrow} id="down" />
       </div>
     </section>
   );
