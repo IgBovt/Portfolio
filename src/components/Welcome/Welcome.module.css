@@ -37,6 +37,7 @@
   background-color: var(--half-black);
   display: flex;
   gap: 6px;
+  align-items: center;
 }
 .textContainer {
   margin: 0px 16px 40px 16px;
@@ -66,6 +67,5 @@
   stroke: var(--secondary);
 }
 .iconCopy {
-  fill: red;
-  stroke: yellow;
+  stroke: var(--main-text);
 }
