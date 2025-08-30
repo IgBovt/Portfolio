@@ -1,12 +1,21 @@
 import Icon from '../../shared/Icon/Icon';
+import { useState } from 'react';
 import css from './Welcome.module.css';
 
 export default function Welcome() {
+  const mail = 'bovt.anastasia.ux@gmail.com';
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(mail).catch(err => {
+      console.error('Помилка копіювання:', err);
+    });
+  };
+
   return (
     <section className={css.container}>
       <div className={css.header}>
         <p className={css.auteur}>BOVT</p>
-        <div className={css.mailContainer}>
+        <div className={css.mailContainer} onClick={handleCopy}>
           <Icon className={css.iconCopy} id="copy" />
           <p className={css.mail}>bovt.anastasia.ux@gmail.com</p>
         </div>
