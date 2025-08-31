@@ -4,7 +4,7 @@ import { projects } from '../../helpers/projects';
 
 export default function ProjectList() {
   return (
-    <section className={css.listContsiner}>
+    <section className={css.listContainer}>
       <div className={css.textContainer}>
         <h1 className={css.title}>
           <span className={css.span}>Selected</span> Projects
@@ -19,7 +19,13 @@ export default function ProjectList() {
       <ul className={css.list}>
         {projects.map(({ name, id }) => (
           <li key={id} className={css.listItem}>
-            <Link to={`/project/${name}`}>{name}</Link>
+            <Link to={`/project/${name}`}>
+              <img
+                className={css.img}
+                src={`/public/desktop/${name}.png`}
+                alt="project icon"
+              />
+            </Link>
           </li>
         ))}
       </ul>
