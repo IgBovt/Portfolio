@@ -4,9 +4,9 @@ export default function ProjectItem({ name }) {
   return (
     <img
       className={css.img}
-      src={`.desktop/${name}.png`}
+      src={`/${name}.png`}
       srcSet={`
-        /desktop/${name}@2x.png 2x,`}
+        /${name}@2x.png 2x,`}
       alt="project icon"
     />
   );
