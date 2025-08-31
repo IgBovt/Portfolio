@@ -1,11 +1,30 @@
 import css from './ProjectList.module.css';
+import { useState, useEffect, useRef } from 'react';
+import { clsx } from 'clsx';
 import { Link } from 'react-router';
 import { projects } from '../../helpers/projects';
 import ProjectItem from '../ProjectItem/ProjectItem';
 
 export default function ProjectList() {
+  const [isActive, setIsActive] = useState(false);
+  const listRef = useRef(null);
+
+  useEffect(() => {
+    const handleWindowWheel = e => {
+      if (!isActive && e.deltaY > 0) {
+        setIsActive(true);
+      }
+    };
+
+    window.addEventListener('wheel', handleWindowWheel);
+
+    return () => {
+      window.removeEventListener('wheel', handleWindowWheel);
+    };
+  }, [isActive]);
+
   return (
-    <section className={css.listContainer}>
+    <section className={clsx(css.listContainer, isActive && css.active)}>
       <div className={css.textContainer}>
         <h1 className={css.title}>
           <span className={css.span}>Selected</span> Projects
