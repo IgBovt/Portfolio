@@ -1,8 +1,8 @@
 import css from './ProjectList.module.css';
 import { Link } from 'react-router';
+import { projects } from '../../helpers/projects';
 
 export default function ProjectList() {
-  const projects = [1, 2, 3, 4, 5, 6, 7];
   return (
     <section className={css.listContsiner}>
       <div className={css.textContainer}>
@@ -17,9 +17,9 @@ export default function ProjectList() {
         </p>
       </div>
       <ul className={css.list}>
-        {projects.map((project, index) => (
-          <li key={index} className={css.listItem}>
-            <Link to="/project/:id">Dashboard</Link>
+        {projects.map(({ name, id }) => (
+          <li key={id} className={css.listItem}>
+            <Link to={`/project/${name}`}>{name}</Link>
           </li>
         ))}
       </ul>
