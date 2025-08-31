@@ -1,6 +1,7 @@
 import css from './ProjectList.module.css';
 import { Link } from 'react-router';
 import { projects } from '../../helpers/projects';
+import ProjectItem from '../ProjectItem/ProjectItem';
 
 export default function ProjectList() {
   return (
@@ -20,11 +21,7 @@ export default function ProjectList() {
         {projects.map(({ name, id }) => (
           <li key={id} className={css.listItem}>
             <Link to={`/project/${name}`}>
-              <img
-                className={css.img}
-                src={`/public/desktop/${name}.png`}
-                alt="project icon"
-              />
+              <ProjectItem name={name} />
             </Link>
           </li>
         ))}
@@ -32,7 +29,3 @@ export default function ProjectList() {
     </section>
   );
 }
-
-//    <Link className={css.link} to={route} style={{ width: width }}>
-//      {text}
-//    </Link>;

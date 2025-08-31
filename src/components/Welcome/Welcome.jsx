@@ -1,5 +1,4 @@
 import Icon from '../../shared/Icon/Icon';
-import { useState } from 'react';
 import css from './Welcome.module.css';
 
 export default function Welcome() {
