@@ -33,7 +33,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 20px;
 }
 .list {
   display: flex;
@@ -41,7 +40,22 @@
   gap: 12px;
   padding: 0px 16px 40px 16px;
 }
-.listItem {
-  /* margin-left: auto;
-  margin-right: auto; */
+@media (min-width: 768px) {
+  .textContainer {
+    padding: 100px 120px 100px 40px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 100%;
+  }
+  .listItem {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
