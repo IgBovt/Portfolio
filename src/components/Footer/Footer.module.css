@@ -1,0 +1,206 @@
+.container {
+  background-color: var(--main-black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  height: 100vh;
+  width: 100%;
+  transform: translateY(100%);
+  transition: 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  overflow: hidden;
+}
+.active {
+  transform: translateY(0);
+}
+.container::after {
+  content: '';
+  position: absolute;
+  width: 1050px;
+  height: 450px;
+  top: -225px;
+  left: 0;
+  background-color: var(--bgc-one);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+.container::before {
+  content: '';
+  position: absolute;
+  width: 408px;
+  height: 500px;
+  top: -250px;
+  right: -200px;
+  background-color: var(--bgc-two);
+  filter: blur(120px);
+  border-radius: 50%;
+}
+.contentContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0px 16px 48px 16px;
+  position: relative;
+  z-index: 10;
+}
+.title {
+  font-family: 'ClashDisplay';
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.text {
+  font-family: 'Manrope';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--secondary);
+  margin-bottom: 32px;
+}
+.cvLink {
+  font-family: 'Manrope';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+  border: 1px solid var(--semiwhite);
+  padding: 16px 32px;
+  border-radius: 64px;
+  margin-bottom: 100px;
+  width: 176px;
+  box-sizing: border-box;
+}
+.cvLink:hover {
+  border: 1px solid var(--white);
+}
+.mailContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mail {
+  font-family: 'Manrope';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-text);
+  text-decoration: underline;
+}
+.iconArrow {
+  stroke: var(--secondary);
+  fill: transparent;
+  width: 40px;
+  height: 40px;
+}
+@media (min-width: 768px) {
+  .container {
+    background-color: var(--main-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    height: 100vh;
+    width: 100%;
+    transform: translateY(100%);
+    transition: 750ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .active {
+    transform: translateY(0);
+  }
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 1050px;
+    height: 450px;
+    top: -225px;
+    left: 0;
+    background-color: var(--bgc-one);
+    filter: blur(100px);
+    border-radius: 50%;
+  }
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 408px;
+    height: 500px;
+    top: -250px;
+    right: -200px;
+    background-color: var(--bgc-two);
+    filter: blur(120px);
+    border-radius: 50%;
+  }
+  .contentContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0px 16px 48px 16px;
+    position: relative;
+    z-index: 10;
+  }
+  .title {
+    font-family: 'ClashDisplay';
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .text {
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--secondary);
+    margin-bottom: 32px;
+  }
+  .cvLink {
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid var(--semiwhite);
+    padding: 16px 32px;
+    border-radius: 64px;
+    margin-bottom: 100px;
+    width: 176px;
+    box-sizing: border-box;
+  }
+  .cvLink:hover {
+    border: 1px solid var(--white);
+  }
+  .mailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mail {
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-text);
+    text-decoration: underline;
+  }
+  .iconArrow {
+    stroke: var(--secondary);
+    fill: transparent;
+    width: 40px;
+    height: 40px;
+  }
+}
