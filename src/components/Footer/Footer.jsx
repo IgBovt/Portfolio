@@ -1,9 +1,11 @@
 import css from './Footer.module.css';
-import Icon from '../../shared/Icon/Icon';
 
-export default function Footer() {
+import Icon from '../../shared/Icon/Icon';
+import { clsx } from 'clsx';
+
+export default function Footer({ isActive }) {
   return (
-    <footer className={css.container}>
+    <footer className={clsx(css.container, isActive && css.active)}>
       <div className={css.contentContainer}>
         <h1 className={css.title}>Bovt Anastasia</h1>
         <p className={css.text}>
