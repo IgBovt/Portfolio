@@ -6,6 +6,7 @@ import { projects } from '../../helpers/projects';
 import ProjectItem from '../ProjectItem/ProjectItem';
 
 export default function ProjectList({ onScrollBottomChange }) {
+  const [isList, setIsList] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const sectionRef = useRef(null);
 
@@ -25,6 +26,10 @@ export default function ProjectList({ onScrollBottomChange }) {
     const handleWheel = e => {
       const scrollDown = e.deltaY > 0;
 
+      if (isActive && scrollDown && e.target.closest(`.${css.listContainer}`)) {
+        setIsList(true);
+      }
+
       if (!scrollDown) {
         onScrollBottomChange(false);
       } else {
@@ -37,7 +42,7 @@ export default function ProjectList({ onScrollBottomChange }) {
 
     window.addEventListener('wheel', handleWheel, { passive: true });
     return () => window.removeEventListener('wheel', handleWheel);
-  }, [onScrollBottomChange]);
+  }, [onScrollBottomChange, isActive]);
 
   return (
     <section
@@ -52,7 +57,7 @@ export default function ProjectList({ onScrollBottomChange }) {
           Tutors can create detailed profiles showcasing their expertise...
         </p>
       </div>
-      <ul className={css.list}>
+      <ul className={clsx(css.list, isList && css.listActive)}>
         {projects.map(({ name, id }) => (
           <li key={id} className={css.listItem}>
             <Link to={`/project/${name}`}>
