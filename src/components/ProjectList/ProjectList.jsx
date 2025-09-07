@@ -25,9 +25,14 @@ export default function ProjectList({ onScrollBottomChange }) {
   useEffect(() => {
     const handleWheel = e => {
       const scrollDown = e.deltaY > 0;
+      const scrollUp = e.deltaY < 0;
 
       if (isActive && scrollDown && e.target.closest(`.${css.listContainer}`)) {
         setIsList(true);
+      }
+
+      if (isActive && scrollUp && e.target.closest(`.${css.listContainer}`)) {
+        setIsList(false);
       }
 
       if (!scrollDown) {
@@ -43,6 +48,28 @@ export default function ProjectList({ onScrollBottomChange }) {
     window.addEventListener('wheel', handleWheel, { passive: true });
     return () => window.removeEventListener('wheel', handleWheel);
   }, [onScrollBottomChange, isActive]);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const handleScroll = () => {
+      const items = el.querySelectorAll(`.${css.listItem}`);
+      const center = el.scrollTop + el.clientHeight / 2;
+
+      items.forEach(item => {
+        const itemCenter = item.offsetTop + item.clientHeight / 2;
+        if (Math.abs(center - itemCenter) < item.clientHeight / 2) {
+          item.classList.add(css.active);
+        } else {
+          item.classList.remove(css.active);
+        }
+      });
+    };
+
+    el.addEventListener('scroll', handleScroll);
+    return () => el.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section
