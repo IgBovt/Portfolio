@@ -61,9 +61,6 @@
   }
 }
 @media (min-width: 1024px) {
-  .listContainer {
-    scroll-snap-type: y mandatory;
-  }
   .listActive {
     transform: translateY(-294px);
   }
