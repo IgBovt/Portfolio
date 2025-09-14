@@ -62,11 +62,12 @@
 }
 @media (min-width: 1024px) {
   .listContainer {
-    overflow-y: hidden;
+    overflow: hidden;
   }
   .list {
     overflow-y: scroll;
     height: 100vh;
+    scroll-snap-type: y mandatory;
   }
   .listActive {
     transform: translateY(-294px);
@@ -74,16 +75,33 @@
   .listItem {
     display: flex;
     justify-content: center;
-    transform: scale(0.7);
+    transform: scale(0.8);
     transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
     scroll-snap-align: center;
   }
+  .listItem:first-child {
+    margin-top: 120px;
+  }
   .listItem:last-child {
-    margin-bottom: 160px;
+    margin-bottom: 120px;
   }
   .listItem.active {
-    transform: scale(1);
+    transform: scale(1.11);
     opacity: 1;
     z-index: 50;
+  }
+  .listContainer::after {
+    content: '';
+    position: absolute;
+    width: 677px;
+    height: 498px;
+    top: -225px;
+    right: 0;
+    background-color: var(--color);
+    filter: blur(100px);
+    border-radius: 50%;
+    filter: blur(200px);
+
+    z-index: -1;
   }
 }

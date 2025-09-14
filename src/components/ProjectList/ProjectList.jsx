@@ -9,8 +9,10 @@ export default function ProjectList({ onScrollFooter }) {
   const [isList, setIsList] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const sectionRef = useRef(null);
+  const [activeId, setActiveId] = useState(null);
 
-  // =============  List open =================  //
+  // ======================================
+
   useEffect(() => {
     const handleWheel = e => {
       if (!isActive && e.deltaY > 0) setIsActive(true);
@@ -22,6 +24,8 @@ export default function ProjectList({ onScrollFooter }) {
     window.addEventListener('wheel', handleWheel, { passive: false });
     return () => window.removeEventListener('wheel', handleWheel);
   }, [isActive]);
+
+  // ======================================
 
   useEffect(() => {
     const handleWheel = e => {
@@ -55,6 +59,8 @@ export default function ProjectList({ onScrollFooter }) {
     return () => window.removeEventListener('wheel', handleWheel);
   }, [onScrollFooter, isActive]);
 
+  // ======================================
+
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -63,22 +69,56 @@ export default function ProjectList({ onScrollFooter }) {
       const items = el.querySelectorAll(`.${css.listItem}`);
       const center = el.scrollTop + el.clientHeight / 2;
 
+      let newActiveId = null;
+
       items.forEach(item => {
         const itemCenter = item.offsetTop + item.clientHeight / 2;
         if (Math.abs(center - itemCenter) < item.clientHeight / 2) {
           item.classList.add(css.active);
+          newActiveId = item.dataset.id;
         } else {
           item.classList.remove(css.active);
         }
       });
+
+      if (newActiveId !== activeId) setActiveId(newActiveId);
+      if (isActive === false) setActiveId(0);
     };
 
     el.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => el.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [activeId, isActive]);
+
+  // ==================================
+  const getColorsById = id => {
+    switch (id) {
+      case '1':
+        return '#8237E57A';
+      case '2':
+        return '#0B55E98C';
+      case '3':
+        return '#45A17B7A';
+      case '4':
+        return '#153DA59E';
+      case '5':
+        return '#96867A91';
+      case '6':
+        return '#1248B8AD';
+      case '7':
+        return '#FC644682';
+      default:
+        return '0c0d0e';
+    }
+  };
 
   return (
-    <section className={clsx(css.listContainer, isActive && css.active)}>
+    <section
+      className={clsx(css.listContainer, isActive && css.active)}
+      style={{
+        '--color': getColorsById(activeId),
+      }}
+    >
       <div className={css.textContainer}>
         <h1 className={css.title}>
           <span className={css.span}>Selected</span> Projects
@@ -89,7 +129,7 @@ export default function ProjectList({ onScrollFooter }) {
       </div>
       <ul ref={sectionRef} className={clsx(css.list, isList && css.listActive)}>
         {projects.map(({ name, id }) => (
-          <li key={id} className={css.listItem}>
+          <li key={id} className={css.listItem} data-id={id}>
             <Link to={`/project/${name}`}>
               <ProjectItem name={name} />
             </Link>
