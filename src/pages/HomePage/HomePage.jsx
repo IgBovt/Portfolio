@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <>
       <Welcome />
-      <ProjectList onScrollBottomChange={setFooterActive} />
-      <Footer isActive={footerActive} onScrollBottomChange={setFooterActive} />
+      <ProjectList onScrollFooter={setFooterActive} />
+      <Footer isActive={footerActive} onScrollFooter={setFooterActive} />
     </>
   );
 }

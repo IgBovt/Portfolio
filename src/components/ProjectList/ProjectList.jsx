@@ -5,11 +5,12 @@ import { Link } from 'react-router';
 import { projects } from '../../helpers/projects';
 import ProjectItem from '../ProjectItem/ProjectItem';
 
-export default function ProjectList({ onScrollBottomChange }) {
+export default function ProjectList({ onScrollFooter }) {
   const [isList, setIsList] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const sectionRef = useRef(null);
 
+  // =============  List open =================  //
   useEffect(() => {
     const handleWheel = e => {
       if (!isActive && e.deltaY > 0) setIsActive(true);
@@ -31,23 +32,28 @@ export default function ProjectList({ onScrollBottomChange }) {
         setIsList(true);
       }
 
-      if (isActive && scrollUp && e.target.closest(`.${css.listContainer}`)) {
+      if (
+        isActive &&
+        scrollUp &&
+        e.target.closest(`.${css.listContainer}`) &&
+        sectionRef.current.scrollTop === 0
+      ) {
         setIsList(false);
       }
 
       if (!scrollDown) {
-        onScrollBottomChange(false);
+        onScrollFooter(false);
       } else {
         const el = sectionRef.current;
         if (!el) return;
         const atBottom = el.scrollHeight - el.scrollTop <= el.clientHeight + 5;
-        if (atBottom) onScrollBottomChange(true);
+        if (atBottom) onScrollFooter(true);
       }
     };
 
     window.addEventListener('wheel', handleWheel, { passive: true });
     return () => window.removeEventListener('wheel', handleWheel);
-  }, [onScrollBottomChange, isActive]);
+  }, [onScrollFooter, isActive]);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -72,10 +78,7 @@ export default function ProjectList({ onScrollBottomChange }) {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={clsx(css.listContainer, isActive && css.active)}
-    >
+    <section className={clsx(css.listContainer, isActive && css.active)}>
       <div className={css.textContainer}>
         <h1 className={css.title}>
           <span className={css.span}>Selected</span> Projects
@@ -84,7 +87,7 @@ export default function ProjectList({ onScrollBottomChange }) {
           Tutors can create detailed profiles showcasing their expertise...
         </p>
       </div>
-      <ul className={clsx(css.list, isList && css.listActive)}>
+      <ul ref={sectionRef} className={clsx(css.list, isList && css.listActive)}>
         {projects.map(({ name, id }) => (
           <li key={id} className={css.listItem}>
             <Link to={`/project/${name}`}>
