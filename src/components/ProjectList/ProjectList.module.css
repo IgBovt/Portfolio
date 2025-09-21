@@ -78,7 +78,11 @@
     transform: scale(0.8);
     transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
     scroll-snap-align: center;
-    cursor: none;
+  }
+  .listItem:hover {
+    cursor:
+      url('/cursor.png') 16 16,
+      auto;
   }
   .listActive .listItem:first-child {
     margin-top: 120px;
@@ -104,5 +108,11 @@
     filter: blur(200px);
 
     z-index: -1;
+  }
+
+  a {
+    cursor:
+      url('../../assets/cursor.png') 16 16,
+      auto;
   }
 }

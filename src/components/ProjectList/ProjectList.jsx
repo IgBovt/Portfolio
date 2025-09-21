@@ -4,6 +4,7 @@ import { clsx } from 'clsx';
 import { Link } from 'react-router';
 import { projects } from '../../helpers/projects';
 import ProjectItem from '../ProjectItem/ProjectItem';
+import cursorPng from '../../assets/cursor.png';
 
 export default function ProjectList({ onScrollFooter }) {
   const [isList, setIsList] = useState(false);
@@ -129,8 +130,15 @@ export default function ProjectList({ onScrollFooter }) {
       </div>
       <ul ref={sectionRef} className={clsx(css.list, isList && css.listActive)}>
         {projects.map(({ name, id }) => (
-          <li key={id} className={css.listItem} data-id={id}>
-            <Link to={`/project/${name}`}>
+          <li
+            key={id}
+            className={css.listItem}
+            data-id={id}
+            style={{
+              cursor: `url(${cursorPng}) 16 16, auto`,
+            }}
+          >
+            <Link className={css.link} to={`/project/${name}`}>
               <ProjectItem name={name} />
             </Link>
           </li>
