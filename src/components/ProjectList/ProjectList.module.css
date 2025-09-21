@@ -110,7 +110,7 @@
     z-index: -1;
   }
 
-  a {
+  .link {
     cursor:
       url('../../assets/cursor.png') 16 16,
       auto;
