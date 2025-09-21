@@ -1,0 +1,23 @@
+.text {
+  color: var(--project-text);
+  font-family: 'Manrope';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.iconBack {
+  fill: red;
+  stroke: green;
+  width: 24px;
+  height: 24px;
+  color: rosybrown;
+}
+.link {
+  text-decoration: none;
+  width: 160px;
+  height: 24px;
+  display: flex;
+  gap: 8px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
