@@ -13,8 +13,8 @@ export default function ProjectTitle() {
   return (
     <div className={css.container}>
       <h1 className={css.title}>{currentProject.name}</h1>
-      <div></div>
-      <p>{currentProject.type}</p>
+      <div className={css.line}></div>
+      <p className={css.type}>{currentProject.type}</p>
     </div>
   );
 }
