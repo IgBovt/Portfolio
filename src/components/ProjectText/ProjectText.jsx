@@ -12,7 +12,14 @@ export default function ProjectText() {
         <div>
           <p></p>
           <div>
-            <ul></ul>
+            <div>
+              <p></p>
+              <ul></ul>
+            </div>
+            <div>
+              <p></p>
+              <ul></ul>
+            </div>
             <ul></ul>
           </div>
         </div>
