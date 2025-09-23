@@ -5,6 +5,7 @@ import css from './ProjectContainer.module.css';
 import Icon from '../../shared/Icon/Icon';
 import ProjectTitle from '../ProjectTitle/ProjectTitle';
 import ProjectHero from '../ProjectHeroContainer/ProjectHero';
+import ProjectText from '../ProjectText/ProjectText';
 
 export default function ProjectContainer() {
   return (
@@ -16,6 +17,7 @@ export default function ProjectContainer() {
       </Link>
       <ProjectTitle />
       <ProjectHero />
+      <ProjectText />
     </div>
   );
 }

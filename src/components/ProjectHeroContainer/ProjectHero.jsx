@@ -1,14 +1,8 @@
 import css from './ProjectHero.module.css';
-import { projects } from '../../helpers/projects';
+import getProject from '../../helpers/getProject';
 
 export default function ProjectHero() {
-  const getProject = () => {
-    return window.location.pathname.slice(1);
-  };
-
-  const currentProject = projects.find(
-    project => project.name === getProject()
-  );
+  const currentProject = getProject();
 
   return (
     <div className={css.container}>
