@@ -4,20 +4,28 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  transition: var(--transition);
 }
 .iconBack {
-  fill: red;
-  stroke: green;
+  fill: var(--project-text);
   width: 24px;
   height: 24px;
   color: rosybrown;
+  transition: var(--transition);
 }
 .link {
   text-decoration: none;
   width: 160px;
   height: 24px;
   display: flex;
+  align-items: center;
   gap: 8px;
   margin-left: 40px;
   margin-top: 40px;
+}
+.link:hover .text {
+  color: var(--white);
+}
+.link:hover .iconBack {
+  fill: var(--white);
 }

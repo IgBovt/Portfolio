@@ -13,7 +13,7 @@ export default function App() {
     <Suspense>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/project/:id" element={<ProjectPage />} />
+        <Route path="/:id" element={<ProjectPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>

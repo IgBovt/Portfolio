@@ -138,7 +138,7 @@ export default function ProjectList({ onScrollFooter }) {
               cursor: `url(${cursorPng}) 16 16, auto`,
             }}
           >
-            <Link className={css.link} to={`/project/${name}`}>
+            <Link className={css.link} to={`/${name}`}>
               <ProjectItem name={name} />
             </Link>
           </li>
