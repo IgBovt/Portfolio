@@ -10,3 +10,53 @@
   margin-bottom: 40px;
   text-align: end;
 }
+.listContainer {
+  margin-bottom: 100px;
+  display: flex;
+  gap: 10px;
+}
+.tagsContainer {
+  flex: 1;
+  margin-top: auto;
+}
+.tagList {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  max-width: 484px;
+}
+.tag {
+  color: var(--project-tag);
+  border: 1px solid var(--project-border);
+  padding: 10px 8px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  font-family: 'Manrope';
+  max-width: 230px;
+  box-sizing: border-box;
+}
+.skillsLists {
+  flex: 1;
+}
+.text {
+  font-family: 'Manrope';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: var(--project-tag);
+  margin-bottom: 68px;
+}
+.columnContainer {
+  display: flex;
+  gap: 44px;
+  color: var(--project-main);
+  font-family: 'Manrope';
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+}
+.column {
+  flex: 1;
+}

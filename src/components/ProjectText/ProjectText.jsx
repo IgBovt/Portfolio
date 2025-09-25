@@ -7,17 +7,26 @@ export default function ProjectText() {
   return (
     <div className={css.container}>
       <h3 className={css.title}>{currentProject.title}</h3>
-      <div>
-        <ul></ul>
-        <div>
-          <p></p>
-          <div>
-            <div>
-              <p></p>
+      <div className={css.listContainer}>
+        <div className={css.tagsContainer}>
+          <ul className={css.tagList}>
+            {currentProject.tags.map(tag => (
+              <li className={css.tag} key={tag}>
+                {tag}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className={css.skillsLists}>
+          <p className={css.text}>{currentProject.text}</p>
+          <div className={css.columnContainer}>
+            <div className={css.column}>
+              <p>Key Challenges</p>
               <ul></ul>
             </div>
-            <div>
-              <p></p>
+            <div className={css.column}>
+              <p>Design Approach</p>
               <ul></ul>
             </div>
             <ul></ul>
