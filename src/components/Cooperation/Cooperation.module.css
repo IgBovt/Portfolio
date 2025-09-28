@@ -1,0 +1,44 @@
+.container {
+  padding: 52px 40px 40px 40px;
+  font-family: 'Manrope';
+  background-color: var(--header);
+}
+.text {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+  color: var(--cooperation);
+  margin-bottom: 24px;
+}
+.span {
+  color: var(--main-text);
+}
+.mailContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  width: 254px;
+}
+.mail {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--main-text);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.iconCopy {
+  stroke: var(--main-text);
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+.mailContainer:hover .mail {
+  color: var(--white);
+  text-decoration-color: var(--white);
+}
+.mailContainer:hover .iconCopy {
+  stroke: var(--white);
+}

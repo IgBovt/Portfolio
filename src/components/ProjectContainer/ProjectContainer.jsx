@@ -7,6 +7,7 @@ import ProjectTitle from '../ProjectTitle/ProjectTitle';
 import ProjectHero from '../ProjectHeroContainer/ProjectHero';
 import ProjectText from '../ProjectText/ProjectText';
 import ProjectGallery from '../ProjectGallery/ProjectGallery';
+import Cooperation from '../Cooperation/Cooperation';
 
 export default function ProjectContainer() {
   return (
@@ -20,6 +21,7 @@ export default function ProjectContainer() {
       <ProjectHero />
       <ProjectText />
       <ProjectGallery />
+      <Cooperation />
     </div>
   );
 }
