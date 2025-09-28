@@ -9,10 +9,10 @@ export default function Footer({ isActive }) {
       <div className={css.contentContainer}>
         <h1 className={css.title}>Bovt Anastasia</h1>
         <p className={css.text}>
-          Lorem ipsum dolor sit amet consectetur. Porttitor pulvinar felis ut
-          morbi convallis mauris placerat. Eu tristique ac id nam. Tincidunt
-          interdum magna volutpat mi odio dolor a facilisis duis. Massa id
-          sagittis imperdiet tellus nisl in mi.
+          Designer with 5+ years of experience in end-to-end product design for
+          startups and enterprises. Skilled in UX research, product strategy,
+          design systems, and business analysis, with a strong focus on
+          requirements definition and aligning design with business goals.
         </p>
         <a className={css.cvLink} href="/example.pdf" download="CV">
           Download CV

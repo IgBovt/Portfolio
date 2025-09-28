@@ -61,6 +61,16 @@
   }
 }
 @media (min-width: 1024px) {
+  .title {
+    margin: 60px auto 40px auto;
+    text-align: center;
+  }
+  .text {
+    margin-left: auto;
+    width: 680px;
+    margin-right: 66px;
+    margin-bottom: 92px;
+  }
   .listContainer {
     overflow: hidden;
   }
@@ -114,5 +124,13 @@
     cursor:
       url('../../assets/cursor.png') 16 16,
       auto;
+  }
+  .iconArrow {
+    width: 60px;
+    height: 60px;
+    stroke: var(--semiwhite);
+    position: absolute;
+    right: 40px;
+    bottom: 66px;
   }
 }

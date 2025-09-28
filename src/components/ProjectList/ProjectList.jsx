@@ -4,6 +4,7 @@ import { clsx } from 'clsx';
 import { Link } from 'react-router';
 import { projects } from '../../helpers/projects';
 import ProjectItem from '../ProjectItem/ProjectItem';
+import Icon from '../../shared/Icon/Icon';
 import cursorPng from '../../assets/cursor.png';
 
 export default function ProjectList({ onScrollFooter }) {
@@ -120,14 +121,16 @@ export default function ProjectList({ onScrollFooter }) {
         '--color': getColorsById(activeId),
       }}
     >
-      <div className={css.textContainer}>
-        <h1 className={css.title}>
-          <span className={css.span}>Selected</span> Projects
-        </h1>
-        <p className={css.text}>
-          Tutors can create detailed profiles showcasing their expertise...
-        </p>
-      </div>
+      <h1 className={css.title}>
+        <span className={css.span}>Selected</span> Projects
+      </h1>
+      <p className={css.text}>
+        Tutors can create detailed profiles showcasing their expertise, build
+        and manage <br />
+        courses, set availability, conduct video lessons, assign homework, and
+        track <br />
+        financial results, including earnings, balance, and withdrawals.
+      </p>
       <ul ref={sectionRef} className={clsx(css.list, isList && css.listActive)}>
         {projects.map(({ name, id }) => (
           <li
@@ -144,6 +147,7 @@ export default function ProjectList({ onScrollFooter }) {
           </li>
         ))}
       </ul>
+      <Icon className={css.iconArrow} id="down" />
     </section>
   );
 }

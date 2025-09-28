@@ -86,6 +86,6 @@ export const projects = [
         tags: ['User Research', 'User Flow', 'Wireframing', 'Competitor Analysis', 'Market Analysis', 'Navigation Structure'],
         KeyChallenges: ['Develop the application from scratch to support all types of OLAS devices and their unique interactions.', 'Ensure reliable real-time tracking and instant alerting in maritime environments, even with limited connectivity.', 'Building an interface that’s intuitive even under high-stress or low-visibility conditions', 'Supporting solo boating scenarios with automated emergency response'],
         DesignApproach: ['Conducted extensive user and market research to understand the needs of different user scenarios', 'Developed user flows for equipment setup, monitoring, and emergency modes', 'Created wireframes focused on clarity, simplicity, and visual hierarchy', 'Designed a UI system optimized for maritime environments (sun glare, motion, wet screens)', 'Defined logic for alert handling, device pairing, GPS tracking, and offline support', 'Collaborated with developers to ensure robust integration with all OLAS transmitters'],
-        galery: ['olas-gallery', 'olas-gallery2', 'olas-gallery3']
+        gallery: ['olas-gallery', 'olas-gallery2', 'olas-gallery3']
     }
 ]
