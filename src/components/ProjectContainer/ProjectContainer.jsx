@@ -6,6 +6,7 @@ import Icon from '../../shared/Icon/Icon';
 import ProjectTitle from '../ProjectTitle/ProjectTitle';
 import ProjectHero from '../ProjectHeroContainer/ProjectHero';
 import ProjectText from '../ProjectText/ProjectText';
+import ProjectGallery from '../ProjectGallery/ProjectGallery';
 
 export default function ProjectContainer() {
   return (
@@ -18,6 +19,7 @@ export default function ProjectContainer() {
       <ProjectTitle />
       <ProjectHero />
       <ProjectText />
+      <ProjectGallery />
     </div>
   );
 }
