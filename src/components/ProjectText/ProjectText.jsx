@@ -22,12 +22,24 @@ export default function ProjectText() {
           <p className={css.text}>{currentProject.text}</p>
           <div className={css.columnContainer}>
             <div className={css.column}>
-              <p>Key Challenges</p>
-              <ul></ul>
+              <p className={css.listTitle}>Key Challenges</p>
+              <ul>
+                {currentProject.KeyChallenges.map(item => (
+                  <li className={css.listTextItem} key={item}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className={css.column}>
-              <p>Design Approach</p>
-              <ul></ul>
+              <p className={css.listTitle}>Design Approach</p>
+              <ul>
+                {currentProject.DesignApproach.map(item => (
+                  <li className={css.listTextItem} key={item}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
             <ul></ul>
           </div>
