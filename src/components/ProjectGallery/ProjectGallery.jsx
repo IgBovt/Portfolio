@@ -16,7 +16,6 @@ export default function ProjectGallery() {
       {currentProject.gallery.length === 3 && (
         <div className={css.container3}>
           <div className={css.coupleContainer}>
-            {' '}
             <img
               className={css.img}
               src={`/${currentProject.gallery[0]}.png`}

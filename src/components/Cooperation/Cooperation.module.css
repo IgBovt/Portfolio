@@ -1,12 +1,12 @@
 .container {
-  padding: 52px 40px 40px 40px;
+  padding: 52px 16px 40px 16px;
   font-family: 'Manrope';
   background-color: var(--header);
 }
 .text {
   font-weight: 400;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 100%;
   color: var(--cooperation);
   margin-bottom: 24px;
 }
@@ -41,4 +41,18 @@
 }
 .mailContainer:hover .iconCopy {
   stroke: var(--white);
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 52px 40px 40px 40px;
+  }
+  .text {
+    line-height: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .text {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

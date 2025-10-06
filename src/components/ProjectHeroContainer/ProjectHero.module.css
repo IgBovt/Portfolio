@@ -1,8 +1,19 @@
 .container {
-  padding: 0 40px;
+  padding: 0 16px;
   margin-bottom: 100px;
 }
 .flexContainer {
   display: flex;
+  flex-direction: column;
   gap: 10px;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .flexContainer {
+    flex-direction: row;
+  }
 }

@@ -1,30 +1,26 @@
 .container {
-  padding: 0 40px;
-  margin-bottom: 100px;
+  padding: 0 16px;
+  margin-bottom: 40px;
 }
 .title {
   font-family: 'Manrope';
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 100%;
   color: var(--project-main);
-  margin-bottom: 40px;
-  text-align: end;
+  margin-bottom: 24px;
 }
 .listContainer {
-  margin-bottom: 100px;
   display: flex;
-  gap: 10px;
+  flex-direction: column-reverse;
 }
 .tagsContainer {
   flex: 1;
-  margin-top: auto;
 }
 .tagList {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
-  max-width: 484px;
 }
 .tag {
   color: var(--project-tag);
@@ -32,7 +28,7 @@
   padding: 10px 8px;
   border-radius: 8px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 100%;
   font-family: 'Manrope';
   max-width: 230px;
@@ -44,33 +40,87 @@
 .text {
   font-family: 'Manrope';
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 100%;
   color: var(--project-tag);
-  margin-bottom: 68px;
+  margin-bottom: 40px;
 }
 .columnContainer {
   display: flex;
+  flex-direction: column;
   gap: 44px;
   color: var(--project-main);
   font-family: 'Manrope';
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 100%;
 }
 .column {
   flex: 1;
 }
 .listTitle {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .listTextItem {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 100%;
+  margin-bottom: 8px;
   color: var(--project-tag);
-  margin-bottom: 16px;
 }
 .listTextItem:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+    margin-bottom: 100px;
+  }
+  .title {
+    font-size: 32px;
+    line-height: 36px;
+    color: var(--project-main);
+    margin-bottom: 40px;
+  }
+  .listContainer {
+    gap: 60px;
+  }
+  .tag {
+    font-size: 16px;
+  }
+  .text {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+  .columnContainer {
+    display: flex;
+    font-size: 22px;
+    line-height: 100%;
+    flex-direction: row;
+  }
+  .listTitle {
+    margin-bottom: 20px;
+  }
+  .listTextItem {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .title {
+    text-align: end;
+  }
+  .listContainer {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .tagList {
+    max-width: 484px;
+  }
+  .text {
+    margin-bottom: 68px;
+  }
+  .tagsContainer {
+    margin-top: auto;
+  }
 }
