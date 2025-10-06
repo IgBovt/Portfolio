@@ -95,6 +95,21 @@
   height: 12px;
   transition: var(--transition);
 }
+@media (max-width: 767px) {
+  .container {
+    position: static;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .container::before,
+  .container::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100vw;
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     height: 76px;

@@ -14,9 +14,6 @@
   overflow: hidden;
   box-sizing: border-box;
 }
-.active {
-  transform: translateY(0);
-}
 .container::after {
   content: '';
   position: absolute;
@@ -101,6 +98,15 @@
   width: 40px;
   height: 40px;
 }
+@media (max-width: 767px) {
+  .container {
+    overflow: hidden;
+    box-sizing: border-box;
+    position: static;
+    transform: translate(0);
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     background-color: var(--main-black);
@@ -210,6 +216,10 @@
     padding-left: 54px;
     padding-right: 40px;
   }
+  .active {
+    transform: translateY(0);
+  }
+
   .contentContainer {
     flex: 1;
     display: flex;

@@ -125,11 +125,11 @@ export default function ProjectList({ onScrollFooter }) {
         <span className={css.span}>Selected</span> Projects
       </h1>
       <p className={css.text}>
-        Tutors can create detailed profiles showcasing their expertise, build
-        and manage <br />
-        courses, set availability, conduct video lessons, assign homework, and
-        track <br />
-        financial results, including earnings, balance, and withdrawals.
+        I have designed digital products across healthcare, education, finance,
+        and travel industries — from internal business systems and analytics
+        platforms to mobile apps for healthcare and sports. My work covers the
+        full cycle: research, user flows, UX/UI design, and collaboration with
+        stakeholders and development teams.
       </p>
       <ul ref={sectionRef} className={clsx(css.list, isList && css.listActive)}>
         {projects.map(({ name, id }) => (

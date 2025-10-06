@@ -10,9 +10,6 @@
   transform: translateY(100%);
   transition: 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.active {
-  transform: translateY(0);
-}
 .textContainer {
   padding: 40px 16px;
 }
@@ -41,6 +38,23 @@
   padding: 0px 16px 40px 16px;
   transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (max-width: 767px) {
+  .listContainer {
+    position: static;
+    height: auto;
+    transform: translateY(0);
+  }
+  .title {
+    padding: 40px 16px 16px 16px;
+  }
+  .text {
+    padding: 0 16px;
+    margin-bottom: 32px;
+  }
+  .iconArrow {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .textContainer {
     padding: 100px 120px 100px 40px;
@@ -61,6 +75,10 @@
   }
 }
 @media (min-width: 1024px) {
+  .active {
+    transform: translateY(0);
+  }
+
   .title {
     margin: 60px auto 40px auto;
     text-align: center;
