@@ -95,7 +95,7 @@
   height: 12px;
   transition: var(--transition);
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .container {
     position: static;
     overflow: hidden;
