@@ -1,9 +1,10 @@
 import css from './Modal.module.css';
 import Icon from '../Icon/Icon';
+import clsx from 'clsx';
 
-export default function Welcome() {
+export default function Welcome({ isOpen }) {
   return (
-    <div className={css.container}>
+    <div className={clsx(css.container, isOpen ? css.open : css.close)}>
       <Icon className={css.icon} id="done" />
       <p>Email successfully copied</p>
     </div>

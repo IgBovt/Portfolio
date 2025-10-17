@@ -48,7 +48,7 @@ export default function Welcome() {
 
         <Icon className={css.iconArrow} id="down" />
       </div>
-      {isOpen && <Modal />}
+      <Modal isOpen={isOpen} />
     </section>
   );
 }
