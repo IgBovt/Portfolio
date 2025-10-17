@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import Icon from '../../shared/Icon/Icon';
 import css from './Welcome.module.css';
+import Modal from '../../shared/Modal/Modal';
 
 export default function Welcome() {
   const mail = 'bovt.anastasia.ux@gmail.com';
@@ -38,6 +39,7 @@ export default function Welcome() {
 
         <Icon className={css.iconArrow} id="down" />
       </div>
+      <Modal />
     </section>
   );
 }

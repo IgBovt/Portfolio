@@ -1,0 +1,26 @@
+.container {
+  width: 260px;
+  height: 52px;
+  padding: 16px;
+  background-color: var(--modal);
+  border-radius: 10px;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  display: flex;
+  gap: 12px;
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: 'Manrope';
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: red;
+  stroke: yellow;
+}
