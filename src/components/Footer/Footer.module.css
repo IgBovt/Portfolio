@@ -84,13 +84,21 @@
   align-items: center;
   justify-content: space-between;
 }
-.mail {
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mail,
+.link {
   font-family: 'Manrope';
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: var(--main-text);
   text-decoration: underline;
+  transition: var(--transition);
 }
 .iconArrow {
   stroke: var(--secondary);
@@ -192,6 +200,11 @@
     width: 40px;
     height: 40px;
   }
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 @media (min-width: 1024px) {
   .container {
@@ -273,5 +286,14 @@
   .iconArrow {
     width: 60px;
     height: 60px;
+  }
+  .mail {
+    cursor: pointer;
+  }
+  .mail:hover {
+    color: var(--white);
+  }
+  .link:hover {
+    color: var(--white);
   }
 }
