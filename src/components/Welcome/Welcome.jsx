@@ -2,14 +2,23 @@ import { Link } from 'react-router';
 import Icon from '../../shared/Icon/Icon';
 import css from './Welcome.module.css';
 import Modal from '../../shared/Modal/Modal';
+import { useState } from 'react';
 
 export default function Welcome() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const mail = 'bovt.anastasia.ux@gmail.com';
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(mail).catch(err => {
-      console.error('Помилка копіювання:', err);
-    });
+    navigator.clipboard
+      .writeText(mail)
+      .then(() => {
+        setIsOpen(true);
+        setTimeout(() => setIsOpen(false), 2000);
+      })
+      .catch(err => {
+        console.error('Помилка копіювання:', err);
+      });
   };
 
   return (
@@ -39,7 +48,7 @@ export default function Welcome() {
 
         <Icon className={css.iconArrow} id="down" />
       </div>
-      <Modal />
+      {isOpen && <Modal />}
     </section>
   );
 }
