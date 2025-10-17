@@ -29,7 +29,6 @@
   color: var(--secondary);
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
 }
 .list {
   display: flex;
@@ -88,7 +87,8 @@
     margin-left: auto;
     width: 680px;
     margin-right: 66px;
-    margin-bottom: 92px;
+    margin-bottom: 72px;
+    line-height: 26px;
   }
   .listContainer {
     overflow: hidden;
