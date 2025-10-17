@@ -10,7 +10,8 @@
 .auteur {
   font-weight: 500;
   font-size: 16px;
-  color: var(--main-text);
+  color: var(--white);
+  text-decoration: none;
 }
 .mail {
   font-weight: 400;

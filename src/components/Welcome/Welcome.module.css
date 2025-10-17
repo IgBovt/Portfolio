@@ -42,7 +42,13 @@
 .auteur {
   font-weight: 500;
   font-size: 16px;
-  color: var(--main-text);
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.auteur:hover {
+  cursor: pointer;
 }
 .mail {
   font-weight: 400;

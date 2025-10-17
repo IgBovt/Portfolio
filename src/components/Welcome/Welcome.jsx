@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import Icon from '../../shared/Icon/Icon';
 import css from './Welcome.module.css';
 
@@ -13,7 +14,9 @@ export default function Welcome() {
   return (
     <section className={css.container}>
       <div className={css.header}>
-        <p className={css.auteur}>BOVT</p>
+        <Link to={'/'} className={css.auteur}>
+          BOVT
+        </Link>
         <div className={css.mailContainer} onClick={handleCopy}>
           <Icon className={css.iconCopy} id="copy" />
           <p className={css.mail}>bovt.anastasia.ux@gmail.com</p>
