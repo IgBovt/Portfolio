@@ -1,6 +1,4 @@
 .container {
-  overflow-y: auto;
-  height: 100vh;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;

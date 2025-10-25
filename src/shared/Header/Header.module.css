@@ -1,11 +1,17 @@
 .header {
+  height: 64px;
+  background-color: var(--header);
+}
+.container {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 64px;
   font-family: 'ClashDisplay';
+  align-items: center;
   padding: 0 16px;
-  background-color: var(--header);
+  box-sizing: border-box;
 }
 .auteur {
   font-weight: 500;
@@ -16,12 +22,12 @@
 .mail {
   font-weight: 400;
   font-size: 12px;
-  color: var(--main-text);
+  color: var(--mail);
 }
 .mailContainer {
   padding: 10px 12px;
   border-radius: 50px;
-  background-color: transparent;
+  background-color: var(--mail-page);
   display: flex;
   gap: 6px;
   align-items: center;
@@ -29,7 +35,7 @@
 }
 
 .iconCopy {
-  stroke: var(--main-text);
+  stroke: var(--mail);
   fill: transparent;
   width: 12px;
   height: 12px;
@@ -38,8 +44,12 @@
 @media (min-width: 768px) {
   .header {
     height: 76px;
+  }
+  .container {
+    max-width: 900px;
     padding: 18px 40px;
   }
+
   .auteur {
     font-size: 26px;
   }
@@ -58,21 +68,14 @@
 }
 
 @media (min-width: 1024px) {
-  .mail {
-    text-decoration: underline;
-    text-decoration-color: transparent;
+  .container {
+    max-width: 1440px;
+  }
+  .mailContainer {
     transition: var(--transition);
+    cursor: pointer;
   }
   .mailContainer:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  .mailContainer:hover .mail {
-    text-decoration-color: var(--white);
-    color: var(--white);
-  }
-
-  .mailContainer:hover .iconCopy {
-    stroke: var(--white);
+    background-color: var(--mail-page-hover);
   }
 }
