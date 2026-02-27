@@ -31,7 +31,7 @@ export default function Footer({ isActive }) {
           design systems, and business analysis, with a strong focus on
           requirements definition and aligning design with business goals.
         </p>
-        <a className={css.cvLink} href="/example.pdf" download="CV-Bovt">
+        <a className={css.cvLink} href="/cv.pdf" download="CV-Bovt">
           Download CV
         </a>
         <div className={css.mailContainer}>

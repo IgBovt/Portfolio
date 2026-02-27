@@ -37,18 +37,18 @@ export const projects = [
         gallery: ['careyou-gallery']
     },
     
-    {
-        id: '4',
-        name: 'Growth',
-        type: 'Landing Page',
-        hero: ['growth-hero'],
-        title: 'A branded website for a marketing agency, designed to combine visually engaging aesthetics with a functionally precise user flow.',
-        text: 'The landing page was created to position the brand effectively, convey its values, and provide visitors with enough relevant information to generate interest and drive inquiries. The design was built around a cohesive storytelling to guide the user through the agency’s services and value proposition.',
-        tags: ['Landing Page', 'Responsive Design', 'Competitor Analysis', 'Stakeholder Interviews', 'Market Analysis', 'Animation Design', 'High-Fidelity Prototypes'],
-        KeyChallenges: ['Create a design that is both visually striking and functionally efficient.', 'Ensure the brand’s personality is reflected through design while delivering clear, structured information.', 'Integrate animations and interactive scrolling without compromising performance or usability.', 'Develop a storytelling approach that naturally guides users through the content.'],
-        DesignApproach: ['Сompetitor analysis to identify trends, strengths, and gaps in similar agency websites.', 'Developed a story-driven structure to communicate the brand’s mission, services, and unique selling points in a logical flow.', 'Designed interactive scroll-triggered sections and subtle animations to enhance engagement without distracting from key content.', 'Established a clean, responsive layout ensuring optimal performance across all devices.', 'Balanced visual creativity with usability principles to keep the user journey smooth and intuitive.'],
-        gallery:['growth-gallery', 'growth-gallery2', 'growth-gallery3']
-     },
+    // {
+    //     id: '4',
+    //     name: 'Growth',
+    //     type: 'Landing Page',
+    //     hero: ['growth-hero'],
+    //     title: 'A branded website for a marketing agency, designed to combine visually engaging aesthetics with a functionally precise user flow.',
+    //     text: 'The landing page was created to position the brand effectively, convey its values, and provide visitors with enough relevant information to generate interest and drive inquiries. The design was built around a cohesive storytelling to guide the user through the agency’s services and value proposition.',
+    //     tags: ['Landing Page', 'Responsive Design', 'Competitor Analysis', 'Stakeholder Interviews', 'Market Analysis', 'Animation Design', 'High-Fidelity Prototypes'],
+    //     KeyChallenges: ['Create a design that is both visually striking and functionally efficient.', 'Ensure the brand’s personality is reflected through design while delivering clear, structured information.', 'Integrate animations and interactive scrolling without compromising performance or usability.', 'Develop a storytelling approach that naturally guides users through the content.'],
+    //     DesignApproach: ['Сompetitor analysis to identify trends, strengths, and gaps in similar agency websites.', 'Developed a story-driven structure to communicate the brand’s mission, services, and unique selling points in a logical flow.', 'Designed interactive scroll-triggered sections and subtle animations to enhance engagement without distracting from key content.', 'Established a clean, responsive layout ensuring optimal performance across all devices.', 'Balanced visual creativity with usability principles to keep the user journey smooth and intuitive.'],
+    //     gallery:['growth-gallery', 'growth-gallery2', 'growth-gallery3']
+    //  },
     
     {
         id: '5',
